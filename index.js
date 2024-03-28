@@ -1,6 +1,8 @@
-import express from "express";
-import datal from "./singers.json" assert { type: "json" };
-const { singers } = datal;
+//import express from "express";
+const express = require("express")
+// import datal from "./singers.json" assert { type: "json" };
+// const { singers } = datal;
+const {singers} = require("./singers.json")
 
 const app = express();
 
@@ -14,7 +16,7 @@ app.get("/singer/:id.html", (req, res) => {
   const { id } = req.params;
   let result = singers.find((singer) => singer.id === parseInt(id));
   if (!result) {
-    res.status(404).send("<h1>找不到所提資訊</h1>");
+    res.status(404).send("<h1>找不到</h1>");
     return false;
   }
   res.send(`<!DOCTYPE html>

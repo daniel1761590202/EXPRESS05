@@ -2,11 +2,10 @@
   "name": "express05",
   "version": "1.0.0",
   "description": "",
-  "main": "index.mjs",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "test": "nodemon index.mjs",
-    "start": "node index.mjs"
+    "test": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
